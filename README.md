@@ -5,17 +5,22 @@ There is a compiled 64 bit exe for convenience.
 
 Requires .NET Framework to be installed.
 
-Requires three or more command line arguments:
+Requires four or more command line arguments:
 
 1. The output volume. Between 0 and 100.
 2. The output speed. Between -10 and 10.
-3. A gender. If set to anything but female, a male voice will be used.
-3. The text to speak. Any farther args are joined and spoken as well.
+3. A voice set by name. Names are returned as the first part the 'list' option (see below). A gender can also be used if a specific voice is not required.
+4. The text to speak. Any farther args are joined and spoken as well.
 
-If run with the single arg 'list' it outputs installed voice info to stdout. Example output:
+Example:
+Node2Speech.exe 100 0 "Microsoft Zira Desktop" testing 1 2 3
+Node2Speech.exe 50 -2 male testing 1 2 3
 
-Microsoft Hazel Desktop - English (Great Britain),Female,Adult
 
-A one per line, comma seperated list. ("Description,Gender,Age")
+Run with the single arg 'list' to output all installed and enabled voice info to stdout. Format is: "Name,Description,Gender,Age"
+
+Example 'list' output:
+"Microsoft Hazel Desktop","Microsoft Hazel Desktop - English (Great Britain)",Female,Adult
+
 
 MIT License
